@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container" id="question-container">
+        <!-- Questions will be dynamically inserted here -->
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="score-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Score</h2>
+            <p id="score-text">You answered X out of Y questions correctly!</p>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBhS4Q944a3ixmV3_aVfkhMaR1rEdsSIVc",
+            authDomain: "regex-game-73f2a.firebaseapp.com",
+            projectId: "regex-game-73f2a",
+            storageBucket: "regex-game-73f2a.appspot.com",
+            messagingSenderId: "445404152791",
+            appId: "1:445404152791:web:2fa5a77ec6291e11a10192"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+    
+    <script src="app.js"></script>
+    <script src="question.js"></script>
+</body>
+
+</html>

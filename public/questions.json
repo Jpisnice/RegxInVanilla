@@ -1,0 +1,567 @@
+{
+    "easy": [
+        {
+            "question": "Write a regex to match a valid email address.",
+            "solutions": [
+                "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+                "^[\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,}$"
+            ],
+            "hint": "An email address contains alphanumeric characters, an '@' symbol, and a domain.",
+            "test_cases": [
+                "example@example.com",
+                "user.name@example.co.uk",
+                "12345@email.com"
+            ]
+        },
+        {
+            "question": "Write a regex to match a US phone number in the format (123) 456-7890.",
+            "solutions": [
+                "^\\(\\d{3}\\) \\d{3}-\\d{4}$",
+                "^\\([0-9]{3}\\) [0-9]{3}-[0-9]{4}$"
+            ],
+            "hint": "The phone number should have a 3-digit area code, followed by a 3-digit prefix, and a 4-digit line number.",
+            "test_cases": [
+                "(123) 456-7890",
+                "(987) 654-3210",
+                "(111) 222-3333"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid IPv4 address.",
+            "solutions": [
+                "^([0-9]{1,3}\\.){3}[0-9]{1,3}$",
+                "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+            ],
+            "hint": "An IPv4 address consists of four numbers separated by dots, each between 0 and 255.",
+            "test_cases": [
+                "192.168.0.1",
+                "255.255.255.0",
+                "192.0.2.1"
+            ]
+        },
+        {
+            "question": "Write a regex to match a date in the format YYYY-MM-DD.",
+            "solutions": [
+                "^\\d{4}-\\d{2}-\\d{2}$",
+                "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            ],
+            "hint": "The date format follows the pattern of four digits for the year, two digits for the month, and two digits for the day, separated by hyphens.",
+            "test_cases": [
+                "2024-07-15",
+                "1999-12-31",
+                "2023-08-15"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid hexadecimal color code.",
+            "solutions": [
+                "^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+                "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+            ],
+            "hint": "A hexadecimal color code can be either 3 or 6 hexadecimal digits, optionally preceded by a hash (#) symbol.",
+            "test_cases": [
+                "#FFA07A",
+                "#FFFFFF",
+                "#0F0"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains only digits.",
+            "solutions": [
+                "^\\d+$",
+                "^[0-9]+$"
+            ],
+            "hint": "The string should only contain digits from 0 to 9.",
+            "test_cases": [
+                "123456",
+                "007",
+                "9876543210"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains only lowercase letters.",
+            "solutions": [
+                "^[a-z]+$",
+                "^[a-z]+$"
+            ],
+            "hint": "The string should only contain lowercase letters from a to z.",
+            "test_cases": [
+                "abcdef",
+                "xyz",
+                "hello"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains only uppercase letters.",
+            "solutions": [
+                "^[A-Z]+$",
+                "^[A-Z]+$"
+            ],
+            "hint": "The string should only contain uppercase letters from A to Z.",
+            "test_cases": [
+                "ABCDEF",
+                "XYZ",
+                "HELLO"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains only alphanumeric characters.",
+            "solutions": [
+                "^[a-zA-Z0-9]+$",
+                "^[A-Za-z0-9]+$"
+            ],
+            "hint": "The string should only contain letters and digits.",
+            "test_cases": [
+                "abc123",
+                "Hello123",
+                "test123"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that starts with 'Hello'.",
+            "solutions": [
+                "^Hello",
+                "^Hello"
+            ],
+            "hint": "The string should start with the word 'Hello'.",
+            "test_cases": [
+                "Hello world",
+                "Hello123",
+                "HelloThere"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that ends with 'world'.",
+            "solutions": [
+                "world$",
+                "world$"
+            ],
+            "hint": "The string should end with the word 'world'.",
+            "test_cases": [
+                "Hello world",
+                "Goodbye, world",
+                "The world"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains 'abc' anywhere in the string.",
+            "solutions": [
+                "abc",
+                "abc"
+            ],
+            "hint": "The string should contain the sequence 'abc'.",
+            "test_cases": [
+                "123abc456",
+                "abcXYZ",
+                "abcdef"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains any whitespace character.",
+            "solutions": [
+                "\\s",
+                "\\s"
+            ],
+            "hint": "The string should contain at least one whitespace character.",
+            "test_cases": [
+                "Hello world",
+                "Tabs\tand spaces",
+                "Line\nbreak"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains no whitespace characters.",
+            "solutions": [
+                "^\\S+$",
+                "^\\S+$"
+            ],
+            "hint": "The string should not contain any whitespace characters.",
+            "test_cases": [
+                "HelloWorld",
+                "Nospacestoo",
+                "NoSpacesHere"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that is a valid URL.",
+            "solutions": [
+                "^(https?|ftp)://[^\\s/$.?#].[^\\s]*$",
+                "^(https?|ftp)://[^\\s/$.?#][^\\s]*$"
+            ],
+            "hint": "A valid URL starts with 'http', 'https', or 'ftp', followed by '://', and a valid domain name.",
+            "test_cases": [
+                "https://example.com",
+                "http://subdomain.example.org",
+                "ftp://ftp.example.net"
+            ]
+        }
+    ],
+    "medium": [
+        {
+            "question": "Write a regex to match a password that must contain at least one lowercase letter, one uppercase letter, one digit, and one special character, and be at least 8 characters long.",
+            "solutions": [
+                "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+                "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])[a-zA-Z0-9!@#\\$%\\^&\\*]{8,}$"
+            ],
+            "hint": "Ensure the regex includes positive lookaheads for each required character type.",
+            "test_cases": [
+                "Password123!",
+                "SecurePass123#",
+                "ComplexP@ssw0rd"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that is a valid floating-point number.",
+            "solutions": [
+                "^[+-]?(\\d+\\.?\\d*|\\.\\d+)$",
+                "^[+-]?\\d*\\.\\d+$"
+            ],
+            "hint": "A floating-point number can have an optional sign, digits before and after the decimal point.",
+            "test_cases": [
+                "3.14159",
+                "-0.001",
+                "123."
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid MAC address.",
+            "solutions": [
+                "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$",
+                "^[0-9A-Fa-f]{2}(:[0-9A-Fa-f]{2}){5}$"
+            ],
+            "hint": "A MAC address consists of six groups of two hexadecimal digits, separated by colons or hyphens.",
+            "test_cases": [
+                "00:1A:2B:3C:4D:5E",
+                "11-22-33-44-55-66",
+                "FF:FF:FF:FF:FF:FF"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that starts and ends with the same character.",
+            "solutions": [
+                "^(.).*\\1$",
+                "^(.).*\\1$"
+            ],
+            "hint": "Use a backreference to match the same character at the beginning and end of the string.",
+            "test_cases": [
+                "aaa",
+                "xxyyxx",
+                "abcba"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid credit card number (any type).",
+            "solutions": [
+                "^(\\d{4}[ -]?){3}\\d{4}$",
+                "^\\d{4}[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}$"
+            ],
+            "hint": "Credit card numbers typically have 16 digits, grouped in sets of 4 separated by spaces or dashes.",
+            "test_cases": [
+                "4111-1111-1111-1111",
+                "5555555555554444",
+                "1234 5678 9876 5432"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains a valid HTML tag.",
+            "solutions": [
+                "^<([a-zA-Z]+)([^<]+)*(?:>(.*)<\\/\\1>|\\s+\\/>)$",
+                "^<([a-zA-Z]+)([^<]+)*(?:>(.*)<\\/\\1>|\\s+\\/>)$"
+            ],
+            "hint": "An HTML tag starts with '<', followed by an alphanumeric tag name, optional attributes, and ends with '>'.",
+            "test_cases": [
+                "<p>This is a paragraph</p>",
+                "<a href=\"https://example.com\">Link</a>",
+                "<div class=\"container\">Content</div>"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid time in 24-hour format (HH:MM).",
+            "solutions": [
+                "^(?:[01]\\d|2[0-3]):(?:[0-5]\\d)$",
+                "^(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$"
+            ],
+            "hint": "Valid hours range from 00 to 23 and minutes range from 00 to 59.",
+            "test_cases": [
+                "23:59",
+                "08:30",
+                "15:00"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid US ZIP code (both 5-digit and 9-digit formats).",
+            "solutions": [
+                "^\\d{5}(-\\d{4})?$",
+                "^\\d{5}(-\\d{4})?$"
+            ],
+            "hint": "A US ZIP code can be either 5 digits long or in the 5-digit-4-digit format.",
+            "test_cases": [
+                "90210",
+                "12345-6789",
+                "54321-9876"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid Social Security Number (SSN) in the format 123-45-6789.",
+            "solutions": [
+                "^\\d{3}-\\d{2}-\\d{4}$",
+                "^\\d{3}-\\d{2}-\\d{4}$"
+            ],
+            "hint": "A valid SSN consists of three digits, a hyphen, two digits, another hyphen, and four digits.",
+            "test_cases": [
+                "123-45-6789",
+                "987-65-4321",
+                "111-22-3333"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid ISBN-10 number.",
+            "solutions": [
+                "^\\d{9}[0-9X]$",
+                "^\\d{9}[0-9X]$"
+            ],
+            "hint": "An ISBN-10 number consists of 9 digits followed by either a digit or 'X' (for the check digit).",
+            "test_cases": [
+                "1234567890",
+                "0321751043",
+                "9992158107"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid ISBN-13 number.",
+            "solutions": [
+                "^\\d{13}$",
+                "^\\d{13}$"
+            ],
+            "hint": "An ISBN-13 number consists of exactly 13 digits.",
+            "test_cases": [
+                "9780321751041",
+                "9780134685991",
+                "9780756404079"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid Twitter handle (username).",
+            "solutions": [
+                "^@[a-zA-Z0-9_]{1,15}$",
+                "^@[a-zA-Z0-9_]{1,15}$"
+            ],
+            "hint": "A valid Twitter handle starts with '@', followed by 1 to 15 alphanumeric characters or underscores.",
+            "test_cases": [
+                "@handle123",
+                "@user_name",
+                "@Twitter_User"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid hexadecimal color code.",
+            "solutions": [
+                "^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+                "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+            ],
+            "hint": "A hexadecimal color code can be either 3 or 6 hexadecimal digits, optionally preceded by a hash (#) symbol.",
+            "test_cases": [
+                "#FFA07A",
+                "#FFFFFF",
+                "#0F0"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid date in the format DD/MM/YYYY.",
+            "solutions": [
+                "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$",
+                "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$"
+            ],
+            "hint": "The date format should be day/month/year, with leading zeros for single-digit days and months.",
+            "test_cases": [
+                "31/12/1999",
+                "15/08/2023",
+                "01/01/2024"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid time in 12-hour format (HH:MM AM/PM).",
+            "solutions": [
+                "^(1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm])$",
+                "^(1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm])$"
+            ],
+            "hint": "The time format should include hours (1-12), minutes (00-59), and an AM/PM indicator.",
+            "test_cases": [
+                "12:00 PM",
+                "09:15 AM",
+                "03:30 pm"
+            ]
+        }
+    ],
+    "hard": [
+        {
+            "question": "Write a regex to match a valid CSS identifier.",
+            "solutions": [
+                "^[_a-zA-Z][_a-zA-Z0-9-]*$",
+                "^[a-zA-Z]+[_a-zA-Z0-9-]*$"
+            ],
+            "hint": "A valid CSS identifier starts with a letter, underscore, or hyphen, followed by letters, digits, underscores, or hyphens.",
+            "test_cases": [
+                "_valid-identifier",
+                "my_id123",
+                "css-class"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid Unix file path.",
+            "solutions": [
+                "^(/[^/]+)+$",
+                "^(/[\\w-]+)+$"
+            ],
+            "hint": "A valid Unix file path starts with a forward slash '/' and can include alphanumeric characters, hyphens, and underscores.",
+            "test_cases": [
+                "/home/user/file.txt",
+                "/var/www/index.html",
+                "/usr/bin/"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid LaTeX command.",
+            "solutions": [
+                "^\\\\[a-zA-Z]+(?:\\[[^\\[\\]]*\\])?$",
+                "^\\\\[a-zA-Z]+(?:\\[[^\\[\\]]*\\])?$"
+            ],
+            "hint": "A valid LaTeX command starts with a backslash '\\', followed by letters, optionally followed by square brackets with parameters.",
+            "test_cases": [
+                "\\frac{a}{b}",
+                "\\alpha",
+                "\\documentclass[12pt]{article}"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that is a valid XML tag.",
+            "solutions": [
+                "^<([a-zA-Z]+)([^<]+)*(?:>(.*)<\\/\\1>|\\s+\\/>)$",
+                "^<([a-zA-Z]+)([^<]+)*(?:>(.*)<\\/\\1>|\\s+\\/>)$"
+            ],
+            "hint": "A valid XML tag starts with '<', followed by an alphanumeric tag name, optional attributes, and ends with '>'.",
+            "test_cases": [
+                "<book>Harry Potter</book>",
+                "<note date=\"2023-07-15\">Reminder</note>",
+                "<empty-tag />"
+            ]
+        },
+        {
+            "question": "Write a regex to match a valid MAC address (colon-separated).",
+            "solutions": [
+                "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$",
+                "^[0-9A-Fa-f]{2}(:[0-9A-Fa-f]{2}){5}$"
+            ],
+            "hint": "A MAC address consists of six groups of two hexadecimal digits, separated by colons or hyphens.",
+            "test_cases": [
+                "00:1A:2B:3C:4D:5E",
+                "11-22-33-44-55-66",
+                "FF:FF:FF:FF:FF:FF"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains only letters and spaces.",
+            "solutions": [
+                "^[a-zA-Z ]+$",
+                "^[a-zA-Z ]+$"
+            ],
+            "hint": "The string should only contain uppercase and lowercase letters, along with spaces.",
+            "test_cases": [
+                "Hello World",
+                "This is a test",
+                "OnlyLetters"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains only letters and apostrophes (for contractions like \"can't\").",
+            "solutions": [
+                "^[a-zA-Z' ]+$",
+                "^[a-zA-Z' ]+$"
+            ],
+            "hint": "The string should only contain uppercase and lowercase letters, apostrophes, and spaces.",
+            "test_cases": [
+                "I'm here",
+                "Don't go",
+                "Let's eat"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains balanced parentheses.",
+            "solutions": [
+                "^\\(([^()]|(\\([^()]*\\)))*\\)$",
+                "^\\(([^()]|\\([^()]*\\))*\\)$"
+            ],
+            "hint": "The string should have pairs of parentheses that are correctly nested and balanced.",
+            "test_cases": [
+                "(a + (b - c))",
+                "((())())",
+                "(1 + 2) * (3 - 4)"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that is a valid domain name (e.g., example.com).",
+            "solutions": [
+                "^([a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,}$",
+                "^([a-zA-Z0-9]([a-zA-Z0-9\\-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,}$"
+            ],
+            "hint": "A valid domain name consists of alphanumeric characters and hyphens, separated by dots, with a valid top-level domain.",
+            "test_cases": [
+                "example.com",
+                "subdomain.example.org",
+                "very-long-domain-name.co.uk"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains only letters, digits, hyphens, and underscores.",
+            "solutions": [
+                "^[a-zA-Z0-9_-]+$",
+                "^[a-zA-Z0-9_-]+$"
+            ],
+            "hint": "The string should only contain uppercase and lowercase letters, digits, hyphens, and underscores.",
+            "test_cases": [
+                "hello_world-123",
+                "user-name_789",
+                "AlphaBeta123"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that is a valid file extension (e.g., .txt, .pdf).",
+            "solutions": [
+                "^\\.[a-zA-Z0-9]+$",
+                "^\\.[a-zA-Z0-9]+$"
+            ],
+            "hint": "The string should start with a dot '.' followed by alphanumeric characters.",
+            "test_cases": [
+                ".txt",
+                ".pdf",
+                ".html"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that is a valid IPv6 address.",
+            "solutions": [
+                "^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$",
+                "^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
+            ],
+            "hint": "An IPv6 address consists of eight groups of four hexadecimal digits, separated by colons.",
+            "test_cases": [
+                "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+                "2001:db8:0:0:0:ff00:42:8329",
+                "fe80::1"
+            ]
+        },
+        {
+            "question": "Write a regex to match a string that contains at least one lowercase letter, one uppercase letter, one digit, and one special character, and be at least 8 characters long.",
+            "solutions": [
+                "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+                "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])[a-zA-Z0-9!@#\\$%\\^&\\*]{8,}$"
+            ],
+            "hint": "Ensure the regex includes positive lookaheads for each required character type.",
+            "test_cases": [
+                "Password123!",
+                "SecurePass123#",
+                "ComplexP@ssw0rd"
+            ]
+        }
+    ]
+}

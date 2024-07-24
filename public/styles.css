@@ -1,0 +1,242 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: xx-large;
+    margin: 70px;
+}
+
+.hint{
+    
+    color: yellow;
+    font-size: large;
+    margin: 30px;
+    
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.item {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#item-1 {
+    background-color: #00abc7;
+}
+
+#item-2 {
+    background-color: #63aa73;
+}
+
+#item-3 {
+    background-color: #fea521;
+}
+
+#item-4 {
+    background-color: #f96c66;
+}
+
+#item-5 {
+    background-color: #444;
+}
+#item-6 {
+    background-color: #00abc7;
+}
+
+#item-7 {
+    background-color: #63aa73;
+}
+
+#item-8 {
+    background-color: #fea521;
+}
+
+#item-9 {
+    background-color: #f96c66;
+}
+
+#item-10 {
+    background-color: #444;
+}
+
+.content {
+    text-align: center;
+}
+
+.ip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        height: 40px;
+        width: fit-content;
+        align-self: center;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+/* Input styles */
+input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 4px solid #ffffff;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focused input styles */
+input[type="text"]:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgb(255, 255, 255);
+    outline: none;
+}
+
+/* Placeholder styles */
+input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.btn.submit {
+    
+    border:2px solid #ffffff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn.submit:hover {
+    background-color: #ffffff;
+    color:black;
+    transform: scale(1.25);
+}
+
+.btn.hint {
+        border: 2px solid rgb(243, 247, 47);
+        border-radius: 5px;
+        background-color: transparent;
+        color: rgb(243, 247, 47);
+        transition: 0.3s;
+}
+
+.btn.hint:hover {
+    background-color: rgb(243, 247, 47);
+    color: black;
+    transform: scale(1.25);
+}
+
+.hint{
+    transition: 0.2s;
+}
+/* Modal background */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 6;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal header */
+h2 {
+    margin-top: 0;
+}
+
+/* Modal paragraph */
+p {
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+            font-size: large;
+            margin: 30px;
+        }
+    
+}
